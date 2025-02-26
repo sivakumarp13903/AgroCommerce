@@ -1,0 +1,80 @@
+/* Farmer Dashboard Container */
+.dashboard-container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  font-size: 28px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+/* Farmer Profile Section */
+.farmer-profile {
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.farmer-profile p {
+  margin: 5px 0;
+}
+
+/* Dashboard Navigation Options */
+.dashboard-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 40%;
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-card:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+/* Loading Text */
+.loading-text {
+  font-style: italic;
+  color: gray;
+}
+
+/* Logout Button */
+.logout-btn {
+  margin-top: 20px;
+  background: #ff4d4d;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #e60000;
+}

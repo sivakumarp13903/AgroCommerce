@@ -1,0 +1,116 @@
+/* Main Container */
+.explore-menu {
+    padding: 30px;
+    background-color: #eef2f7; /* Soft cool background */
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Heading Style */
+h1 {
+    font-size: 2.7em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Description Text */
+.explore-menu-text {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 0 25px;
+}
+
+/* Item List Layout */
+.explore-menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* List Item Styling - Circular Format */
+.explore-menu-list-item {
+    background-color: #ffffff;
+    border-radius: 50%; /* Makes item circular */
+    width: 200px; /* Fixed width for circular shape */
+    height: 200px; /* Fixed height for circular shape */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column;
+    padding: 10px;
+}
+
+.explore-menu-list-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+}
+
+/* Image Styling */
+.explore-menu-list-item img {
+    width: 100px; /* Smaller size to fit circle */
+    height: 100px; /* Fixed height for uniformity */
+    object-fit: cover;
+    border-radius: 50%; /* Make image circular */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.explore-menu-list-item:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Item Name Styling */
+.explore-menu-list-item p {
+    font-size: 1.1em;
+    color: #34495e;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+/* Price Tag Styling */
+.price-tag {
+    position: absolute;
+    bottom: 10px;
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 20px; /* Rounded for pill shape */
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .explore-menu-text {
+        font-size: 1em;
+    }
+
+    .explore-menu-list-item {
+        width: 150px; /* Smaller circular items on mobile */
+        height: 150px;
+    }
+}
+
+/* Active Class Styling */
+.explore-menu-list-item.active {
+    border: 4px solid #e67e22;
+    padding: 4px;
+    transition: border-color 0.3s ease;
+}

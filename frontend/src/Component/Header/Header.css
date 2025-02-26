@@ -1,0 +1,168 @@
+/* Header Styles */
+.header {
+    height: 45vw;
+    margin: 30px auto;
+    background: url('/header_img.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    max-height: 600px;
+    border-radius: 15px;
+    min-height: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
+    overflow: hidden; /* Ensures content stays within the border-radius */
+    opacity: 0; /* Start hidden */
+    animation: fadeInSlideUp 1s forwards; /* Animate on load */
+}
+
+/* Header Contents */
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    max-width: 80%; /* Increased max-width for better appearance on smaller screens */
+    top: 50%; /* Centers the content vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Full centering horizontally & vertically */
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out; /* Adds a smooth fade-in effect */
+    opacity: 0; /* Start hidden */
+    animation-delay: 0.3s; /* Delay for contents to appear after header */
+    animation-fill-mode: forwards; /* Maintain final state */
+}
+
+/* Animation for smooth entrance */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* New Animation for Header on Page Load */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slide up from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+/* Heading Styles */
+.header-contents h3 {
+    font-weight: 700; /* Bolder for stronger emphasis */
+    color: transparent; 
+    font-size: max(4.5vw, 32px); /* Increased for more impact */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(90deg, #ff8a00, #e52e71); /* More vibrant gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.header-contents h2:hover {
+    letter-spacing: 3px; /* Slight effect on hover */
+    transform: scale(1.05); /* Grows slightly when hovered */
+}
+
+/* Paragraph Styles */
+.header-contents p {
+    color: #fdfdfd; /* Light color for contrast */
+    font-size: max(1.2vw, 18px); /* Slightly larger */
+    line-height: 1.8; /* Increases readability */
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    padding: 10px 15px; /* Adds padding inside the border */
+    border: 2px solid #ff8a00; /* Full border around the paragraph */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: background to improve readability */
+    animation: fadeInUp 1.8s ease-in-out; /* Fade-in with upward movement */
+}
+
+/* Button Styles */
+.header-contents button {
+    border: 2px solid transparent;
+    color: #fff; /* White text for contrast */
+    font-weight: 600;
+    padding: 1.2vw 2.5vw; /* Slightly larger for a modern look */
+    background: linear-gradient(90deg, #ff8a00, #e52e71); /* Gradient background */
+    font-size: max(1vw, 14px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+.header-contents button:hover {
+    background: linear-gradient(90deg, #e52e71, #ff8a00); /* Reverses the gradient on hover */
+    transform: scale(1.05); /* Slightly increases the size */
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More shadow on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        height: 60vw; /* Adjust height for smaller screens */
+        max-height: 400px; /* Adjust max-height for smaller screens */
+    }
+    
+    .header-contents {
+        max-width: 90%; /* Adjust max-width for smaller screens */
+        top: 45%; /* Adjust vertical positioning */
+    }
+
+    .header-contents h2 {
+        font-size: max(5vw, 24px); /* Smaller heading for mobile */
+    }
+
+    .header-contents p {
+        font-size: max(2vw, 16px); /* Smaller paragraph text for mobile */
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .header-contents button {
+        font-size: max(2vw, 12px); /* Smaller button text for mobile */
+        padding: 1vw 2vw; /* Adjust button padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 70vw; /* Further adjust height for extra small screens */
+    }
+
+    .header-contents {
+        top: 40%; /* Further adjust vertical positioning */
+    }
+
+    .header-contents h2 {
+        font-size: max(6vw, 20px); /* Even smaller heading */
+    }
+
+    .header-contents p {
+        font-size: max(2.5vw, 14px); /* Even smaller paragraph text */
+    }
+
+    .header-contents button {
+        font-size: max(2.5vw, 10px); /* Even smaller button text */
+    }
+}

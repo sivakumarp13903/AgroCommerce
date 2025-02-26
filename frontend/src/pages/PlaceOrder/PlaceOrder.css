@@ -1,0 +1,169 @@
+.place-order {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .place-order-left,
+  .place-order-right {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 48%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .place-order-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .place-order-left .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .place-order-left input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .place-order-left .multi-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .multi-fields input {
+    flex: 1;
+  }
+  
+  .place-order-right .cart-total {
+    text-align: left;
+  }
+  
+  .place-order-right h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  .cart-total-details b {
+    font-size: 1.2rem;
+    color: #222;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .place-order {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .place-order-left,
+    .place-order-right {
+      width: 100%;
+    }
+  
+    .place-order-left .title {
+      font-size: 1.4rem;
+    }
+  
+    .place-order-right h2 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .place-order-left .multi-fields {
+      flex-direction: column;
+    }
+  
+    .place-order-left input {
+      font-size: 0.9rem;
+    }
+  
+    .place-order-right h2 {
+      font-size: 1.4rem;
+    }
+  
+    .cart-total-details {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .place-order {
+      padding: 10px;
+    }
+  
+    .place-order-left,
+    .place-order-right {
+      padding: 15px;
+    }
+  
+    .place-order-left input {
+      padding: 8px;
+      font-size: 0.8rem;
+    }
+  
+    .place-order-right h2 {
+      font-size: 1.2rem;
+    }
+  
+    .cart-total-details {
+      font-size: 0.8rem;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 0.8rem;
+    }
+  }
+  

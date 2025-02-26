@@ -1,0 +1,63 @@
+.available-jobs-container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.job-list {
+    list-style: none;
+    padding: 0;
+}
+
+.job-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.apply-btn {
+    background-color: #28a745;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.application-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background: #899d36;
+    text-align: left;
+}
+
+.application-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.application-form select,
+.application-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.application-form button {
+    background-color: #007bff;
+    color: rgb(0, 0, 0);
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}

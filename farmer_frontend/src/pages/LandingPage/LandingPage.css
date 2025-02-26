@@ -1,0 +1,112 @@
+/* Container */
+.sagri-landing-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+}
+
+/* Background Animation */
+.sagri-background-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #388e3c, #1b5e20);
+    animation: sagri-bg-fade 5s infinite ease-in-out alternate;
+    z-index: 0;
+}
+
+@keyframes sagri-bg-fade {
+    0% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Icon Styles */
+.sagri-icon-wrapper {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.sagri-animated-icon {
+    animation: sagri-float 2s infinite ease-in-out;
+}
+
+@keyframes sagri-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Title Styles */
+.sagri-main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: sagri-fade-in 1.5s ease-in-out forwards;
+    position: relative;
+    z-index: 1;
+}
+
+/* Subtitle Styles */
+.sagri-subtitle {
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: sagri-fade-in 2s ease-in-out forwards;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes sagri-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styles */
+.sagri-start-btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+
+.sagri-start-btn:hover {
+    transform: scale(1.1);
+    background: #ff9800;
+}
+
+.sagri-start-btn:active {
+    transform: scale(0.9);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sagri-main-title {
+        font-size: 2rem;
+    }
+    
+    .sagri-subtitle {
+        font-size: 1rem;
+    }
+    
+    .sagri-start-btn {
+        font-size: 1rem;
+        padding: 8px 24px;
+    }
+}

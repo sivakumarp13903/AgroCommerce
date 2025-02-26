@@ -1,0 +1,45 @@
+.work-progress-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.work-progress-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.work-progress-table th, .work-progress-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.work-progress-table th {
+    background-color: #f4f4f4;
+}
+
+.verify-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.verify-btn:hover {
+    background-color: #218838;
+}
+
+.verified-text {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}

@@ -1,0 +1,70 @@
+/* 🌟 Fixed, Transparent & Elegant Navbar */
+.recruit-header {
+    position: fixed; /* Keeps the navbar static while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    backdrop-filter: blur(12px); /* Glassmorphism effect */
+    padding: 15px 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation List */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Items */
+.nav-item {
+    margin: 0 20px;
+}
+
+/* 🌈 Modern Animated Navigation Links */
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+}
+
+/* 🔥 Smooth Hover Effect */
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+    color: #ff8c00;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* 📌 Sticky Navbar Effect (Changes Background on Scroll) */
+.scrolled {
+    background: rgba(0, 0, 0, 0.8); /* Darker background on scroll */
+}
+
+/* 📱 Mobile Responsive Design */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+}
+
+/* 📌 Offset Content to Prevent Overlap */
+body {
+    padding-top: 70px; /* Adjust depending on navbar height */
+}

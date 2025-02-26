@@ -1,0 +1,89 @@
+/* Global Page Container */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    font-family: Arial, sans-serif;
+}
+
+/* Form Styling */
+.form-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 350px;
+    text-align: center;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.animated-icon {
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.submit-button, .otp-button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.otp-button {
+    background: #f39c12;
+}
+
+.submit-button:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+}
+
+.submit-button:hover {
+    background: #45a049;
+}
+
+/* Login Link */
+.login-text {
+    margin-top: 15px;
+}
+
+.login-link {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-link:hover {
+    color: darkblue;
+}

@@ -1,0 +1,77 @@
+/* Container styles */
+.post-job-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(18, 137, 36, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header styles */
+.post-job-header {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Error message styles */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Form styles */
+.post-job-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input styles */
+.post-job-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Textarea styles */
+.post-job-textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Button styles */
+.post-job-button {
+    background: #4CAF50;
+    color: rgb(20, 8, 8);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.post-job-button:hover {
+    background: #45a049;
+}
+
+.post-job-button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}

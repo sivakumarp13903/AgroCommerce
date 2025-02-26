@@ -1,0 +1,44 @@
+.worker-nav-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 128, 255, 0.9);
+    padding: 10px 0;
+    transition: background 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.worker-nav-header.scrolled {
+    background: rgba(0, 128, 255, 1);
+}
+
+.worker-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.worker-nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.worker-nav-item {
+    padding: 10px;
+}
+
+.worker-nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.worker-nav-link:hover,
+.worker-nav-link.active {
+    background: white;
+    color: blue;
+}

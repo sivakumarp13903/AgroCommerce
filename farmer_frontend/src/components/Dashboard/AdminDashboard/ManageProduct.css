@@ -1,0 +1,84 @@
+/* ManageProduct.css */
+.container {
+    max-width: 90%;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+  }
+  
+  .table td,
+  .table th {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: black;
+  }
+  
+  button.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.85;
+  }
+  
+  /* Modal Styling */
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modal-title {
+    font-size: 20px;
+  }
+  
+  .modal-footer button {
+    padding: 8px 14px;
+  }
+  

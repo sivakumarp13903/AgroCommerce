@@ -1,0 +1,117 @@
+/* Main Popup Container */
+.login-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup Box */
+.login-popup-container {
+    background-color: #ffffff; /* Solid white background for clarity */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Clear shadow for depth */
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Title Section */
+.login-popup-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.login-popup-title h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.login-popup-title img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.login-popup-title img:hover {
+    opacity: 0.7; /* Slight opacity effect on hover */
+}
+
+/* Input Fields */
+.login-popup-inputs input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #dcdcdc; /* Soft border for input clarity */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background color */
+    color: #2c3e50;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-popup-inputs input:focus {
+    border-color: #6a11cb; /* Color highlight on focus */
+}
+
+/* Login/Signup Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6a11cb; /* Solid accent color */
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5b0dbf; /* Darker shade on hover */
+}
+
+/* Terms and Conditions */
+.login-popup-condition {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #6c757d;
+    margin: 15px 0;
+}
+
+.login-popup-condition input {
+    margin-right: 10px;
+}
+
+/* Switch between Login and Signup */
+.login-popup-container p {
+    font-size: 1em;
+    color: #34495e;
+    margin-top: 10px;
+}
+
+.login-popup-container span {
+    color: #6a11cb;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.login-popup-container span:hover {
+    color: #5b0dbf;
+}

@@ -1,0 +1,147 @@
+/* Main Container */
+.agri-login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    overflow: hidden;
+}
+
+/* Login Box */
+.agri-login-box {
+    background: rgba(57, 34, 34, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+/* Icon Container */
+.agri-login-icon-container {
+    margin-bottom: 1.5rem;
+}
+
+.agri-login-animated-icon {
+    animation: agri-login-float 2s infinite ease-in-out;
+}
+
+@keyframes agri-login-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Title */
+.agri-login-title {
+    color: #2e7d32;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Input Groups */
+.agri-login-input-group {
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.agri-login-input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.agri-login-input-group input:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+/* Login Button */
+.agri-login-button {
+    width: 100%;
+    padding: 12px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.agri-login-button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.agri-login-button:active {
+    transform: translateY(0);
+}
+
+/* Signup Text */
+.agri-login-signup-text {
+    margin-top: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.agri-login-signup-link {
+    color: #4caf50;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.agri-login-signup-link:hover {
+    color: #45a049;
+    text-decoration: underline;
+}
+
+/* Error Message */
+.agri-login-error {
+    color: #d32f2f;
+    background: #ffebee;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    animation: agri-login-shake 0.5s ease-in-out;
+}
+
+@keyframes agri-login-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .agri-login-box {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .agri-login-title {
+        font-size: 1.75rem;
+    }
+
+    .agri-login-button {
+        padding: 10px;
+    }
+}
