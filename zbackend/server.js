@@ -27,9 +27,10 @@ const app = express();
 const corsOptions = {
   origin: "*", // Allow all origins (for development)
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: "Content-Type, Authorization",
+  allowedHeaders: "Content-Type, Authorization, token", // Add 'token' explicitly
 };
 app.use(cors(corsOptions));
+
 
 // Middleware
 app.use(express.json());
@@ -50,7 +51,7 @@ connectDB();
 // API Routes
 app.use("/api", userRoutes);
 app.use("/api/products", productRoutes);
-app.use("/api/orders", orderRoutes);
+
 app.use("/api/jobs", jobRoutes);
 app.use("/api", authRoutes);
 app.use("/api/admin", adminRoutes);
@@ -60,6 +61,7 @@ app.use("/api/job-applications", jobApplicationRoutes);
 app.use("/api/workprogress", workProgressRoutes);
 app.use("/api/commodity", commodityRouter);
 app.use("/api/cart", cartRouter);
+app.use("/api/order", orderRoutes);
 
 // Root Endpoint
 app.get("/", (req, res) => {

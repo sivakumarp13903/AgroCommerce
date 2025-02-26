@@ -2,7 +2,7 @@
 .header {
     height: 45vw;
     margin: 30px auto;
-    background: url('/header_img.jpg') no-repeat center center;
+    background: url('../../assets/agri1.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
     max-height: 600px;
@@ -79,7 +79,7 @@
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     margin-top: 15px;
     padding: 10px 15px; /* Adds padding inside the border */
-    border: 2px solid #ff8a00; /* Full border around the paragraph */
+    border: 2px solid #14bb4b; /* Full border around the paragraph */
     border-radius: 8px; /* Rounded corners for a softer look */
     background-color: rgba(0, 0, 0, 0.5); /* Optional: background to improve readability */
     animation: fadeInUp 1.8s ease-in-out; /* Fade-in with upward movement */
@@ -91,7 +91,7 @@
     color: #fff; /* White text for contrast */
     font-weight: 600;
     padding: 1.2vw 2.5vw; /* Slightly larger for a modern look */
-    background: linear-gradient(90deg, #ff8a00, #e52e71); /* Gradient background */
+    background: linear-gradient(90deg, #0d8830, #65b57f); /* Gradient background */
     font-size: max(1vw, 14px);
     border-radius: 50px;
     cursor: pointer;
@@ -100,7 +100,7 @@
 }
 
 .header-contents button:hover {
-    background: linear-gradient(90deg, #e52e71, #ff8a00); /* Reverses the gradient on hover */
+    background: linear-gradient(90deg, #0b3a22, #ff8a00); /* Reverses the gradient on hover */
     transform: scale(1.05); /* Slightly increases the size */
     color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More shadow on hover */

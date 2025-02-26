@@ -4,16 +4,17 @@ import { StoreContext } from "../../context/StoreContext";
 import FoodItem from "../FoodItem/FoodItem";
 
 const FoodDisplay = ({ category }) => {
-  const { commodity_list } = useContext(StoreContext);
+  const { commodities } = useContext(StoreContext); // Use 'commodities' instead of 'commodity_list'
+
   return (
     <div className="food-display" id="food-display">
-      <h2>Find You Commodity</h2>
+      <h2>Find Your Commodity</h2>
       <div className="food-display-list">
-        {commodity_list.map((item, index) => {
-          if ((category === "All" || category === item.category)) {
+        {commodities.map((item, index) => {
+          if (category === "All" || category === item.category) {
             return (
               <FoodItem
-                key={index}
+                key={item._id} // Use '_id' as the key instead of 'index'
                 id={item._id}
                 name={item.name}
                 description={item.description}
@@ -22,6 +23,7 @@ const FoodDisplay = ({ category }) => {
               />
             );
           }
+          return null; // Avoid undefined return in map()
         })}
       </div>
     </div>

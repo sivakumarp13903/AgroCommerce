@@ -1,5 +1,5 @@
 const express = require("express");
-const authMiddleware = require("../middleware/auth.js");
+const authMiddleware = require("../middleware/auth2.js");
 const { listOrders, placeOrder, updateStatus, userOrders, verifyOrder } = require("../controllers/order.controller.js");
 
 const orderRouter = express.Router();

@@ -1,6 +1,7 @@
 import basket_icon from './basket_icon.png'
 import logo from './agriLogo.png'
-import header_img from './img1.jfif'
+import header_img from './agri2.jpg'
+import headeragri_img from './agri2.jpg'
 import search_icon from './search_icon.png'
 import menu_1 from './GreenGram2.jfif'
 import menu_2 from './manjal2.jfif'
@@ -64,6 +65,7 @@ export const assets = {
     logo,
     basket_icon,
     header_img,
+    headeragri_img,
     search_icon,
     rating_starts,
     add_icon_green,

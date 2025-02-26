@@ -26,6 +26,7 @@ import AdminDashboard from "../components/Dashboard/AdminDashboard/AdminDashboar
 import AddCommodity from "../components/Dashboard/AdminDashboard/AddCommodity";
 import Sidebar from "../components/Dashboard/AdminDashboard/Sidebar"; // Adjust path if needed
 import ManageProduct from "../components/Dashboard/AdminDashboard/ManageProduct";
+import ManageOrders from "../components/Dashboard/AdminDashboard/ManageOrders";
 
 
 /* Farmer Employee Management Layout */
@@ -142,6 +143,7 @@ const AppRoutes = () => {
           <Route index element={<AdminDashboard />} />
           <Route path="add-product" element={<AddCommodity />} />
           <Route path="manage-products" element={<ManageProduct />} />
+          <Route path="manage-orders" element={<ManageOrders />} />
         </Route>
       </Routes>
     </CartContext.Provider>
