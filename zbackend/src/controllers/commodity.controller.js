@@ -102,4 +102,31 @@ const updateCommodity = async (req, res) => {
   }
 };
 
-module.exports = { addCommodity, listCommodity, removeCommodity , updateCommodity};
+const reduceStock = async (req, res) => {
+  try {
+    const { id, quantity } = req.body; // Get commodity ID and order quantity
+
+    // Find the commodity
+    const commodity = await CommodityModel.findById(id);
+
+    if (!commodity) {
+      return res.status(404).json({ success: false, message: "Commodity not found" });
+    }
+
+    if (commodity.stock < quantity) {
+      return res.status(400).json({ success: false, message: "Not enough stock available" });
+    }
+
+    // Reduce stock count
+    commodity.stock -= quantity;
+    await commodity.save();
+
+    res.status(200).json({ success: true, message: "Stock updated successfully", data: commodity });
+  } catch (error) {
+    console.error("Error reducing stock:", error.message);
+    res.status(500).json({ success: false, message: "An error occurred while updating stock." });
+  }
+};
+
+
+module.exports = { addCommodity, listCommodity, removeCommodity , updateCommodity,reduceStock};

@@ -20,6 +20,7 @@ const FoodDisplay = ({ category }) => {
                 description={item.description}
                 price={item.price}
                 image={item.image}
+                stock={item.stock}
               />
             );
           }

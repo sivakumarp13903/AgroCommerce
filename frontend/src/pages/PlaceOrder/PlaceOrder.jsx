@@ -32,33 +32,54 @@ const PlaceOrder = () => {
 
     if (!commodities || commodities.length === 0) {
       console.error("Commodities data is missing or not loaded.");
+      alert("Cart is empty. Add items before placing an order.");
       return;
+    }
+
+    if (!token) {
+      alert("User not authenticated. Please log in.");
+      navigate('/login');
+      return;
+    }
+
+    // Ensure all form fields are filled
+    for (let key in data) {
+      if (!data[key].trim()) {
+        alert(`Please fill in the ${key} field.`);
+        return;
+      }
     }
 
     let orderItems = commodities
       .filter((item) => cartItems[item._id] > 0)
       .map((item) => ({
-        ...item,
+        _id: item._id,
+        name: item.name,
+        price: item.price,
         quantity: cartItems[item._id],
       }));
 
     let orderData = {
       address: data,
       items: orderItems,
-      amount: getTotalCartAmount() + 2, // Adding delivery fee
+      amount: getTotalCartAmount() + 2, // Fixed delivery fee
     };
+
+    console.log("Order Data:", orderData);
 
     try {
       let response = await axios.post(`${url}/api/order/place`, orderData, { headers: { token } });
 
+      console.log("Response:", response.data);
+
       if (response.data.success) {
         window.location.replace(response.data.session_url);
       } else {
-        alert('Error placing order. Please try again.');
+        alert(response.data.message || 'Error placing order. Please try again.');
       }
     } catch (error) {
       console.error('Order placement failed:', error);
-      alert('Order placement failed. Check console for details.');
+      alert(error.response?.data?.message || 'Order placement failed. Check console for details.');
     }
   };
 
@@ -98,17 +119,17 @@ const PlaceOrder = () => {
           <div>
             <div className="cart-total-details">
               <p>Subtotal</p>
-              <p>${getTotalCartAmount()}</p>
+              <p>₹ {getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Delivery fee</p>
-              <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
+              <p>₹ {getTotalCartAmount() === 0 ? 0 : 2}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</b>
+              <b>₹ {getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</b>
             </div>
           </div>
           <button type="submit">PURCHASE</button>

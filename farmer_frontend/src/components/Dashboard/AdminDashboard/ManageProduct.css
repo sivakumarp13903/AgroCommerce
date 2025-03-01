@@ -1,84 +1,93 @@
-/* ManageProduct.css */
-.container {
-    max-width: 90%;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .table {
-    margin-top: 20px;
-  }
-  
-  .table th {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-  }
-  
-  .table td,
-  .table th {
-    padding: 12px;
-    text-align: center;
-    vertical-align: middle;
-  }
-  
-  .table tbody tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .button-group {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-  }
-  
-  button {
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button.btn-warning {
-    background-color: #ffc107;
-    border: none;
-    color: black;
-  }
-  
-  button.btn-danger {
-    background-color: #dc3545;
-    border: none;
-    color: white;
-  }
-  
-  button:hover {
-    opacity: 0.85;
-  }
-  
-  /* Modal Styling */
-  .modal-content {
-    border-radius: 10px;
-  }
-  
-  .modal-header {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .modal-title {
-    font-size: 20px;
-  }
-  
-  .modal-footer button {
-    padding: 8px 14px;
-  }
-  
+.manage-product-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.manage-product-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.manage-product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.manage-product-table th, 
+.manage-product-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.manage-product-table th {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: bold;
+}
+
+.manage-product-table td {
+  color: #222;
+  font-size: 16px;
+}
+
+.manage-product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.manage-product-edit-btn {
+  background-color: #ffc107;
+  border: none;
+  padding: 8px 12px;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.manage-product-delete-btn {
+  background-color: #dc3545;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.manage-product-modal .modal-content {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.manage-product-modal .modal-header {
+  border-bottom: none;
+}
+
+.manage-product-modal .modal-footer {
+  border-top: none;
+}
+
+.manage-product-modal input,
+.manage-product-modal textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.mt-4{
+  margin-left: 20%;
+  background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+    no-repeat center center/cover;
+}

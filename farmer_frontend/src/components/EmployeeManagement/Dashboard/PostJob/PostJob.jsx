@@ -60,7 +60,8 @@ const PostJob = () => {
     };
 
     return (
-        <div className="post-job-container">
+        <div className="postjob-body">
+            <div className="post-job-container">
             <h2 className="post-job-header">Post a Job</h2>
             {error && <p className="error-message">{error}</p>}
             
@@ -75,6 +76,7 @@ const PostJob = () => {
                     {loading ? "Posting..." : "Post Job"}
                 </button>
             </form>
+        </div>
         </div>
     );
 };

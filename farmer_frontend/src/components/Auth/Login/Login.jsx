@@ -77,7 +77,7 @@ const Login = () => {
                 <div className="agri-login-icon-container">
                     <FaTractor className="agri-login-animated-icon" size={80} color="#4caf50" />
                 </div>
-                <h2 className="agri-login-title">Farmer Login</h2>
+                <h2 className="agri-login-title">Login</h2>
 
                 {error && <p className="agri-login-error">{error}</p>}
 

@@ -1,5 +1,5 @@
 const express = require("express");
-const { addCommodity, listCommodity, removeCommodity , updateCommodity} = require("../controllers/commodity.controller");
+const { addCommodity, listCommodity, removeCommodity , updateCommodity,reduceStock} = require("../controllers/commodity.controller");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
@@ -28,6 +28,7 @@ commodityRouter.post("/add", upload.single("image"), addCommodity);
 commodityRouter.get("/list", listCommodity);
 commodityRouter.post("/remove", removeCommodity);
 commodityRouter.put("/update/:id", updateCommodity);
+commodityRouter.post("/commodity/reduce-stock", reduceStock);
 
 
 module.exports = commodityRouter;

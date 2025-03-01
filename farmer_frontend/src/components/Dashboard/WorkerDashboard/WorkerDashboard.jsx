@@ -15,7 +15,7 @@ const WorkerDashboard = ({ currentPath = "" }) => {
     }, []);
 
     const links = [
-        { path: "/worker-dashboard/jobs", label: "Available Jobs" },
+        { path: "/worker-dashboard/jobs", label: "Search Jobs" },
         { path: "/worker-dashboard/applied-jobs", label: "My Jobs" },
         { path: "/worker-dashboard/accepted-jobs", label: "Work Progress" },
         { path: "/worker-dashboard/payments", label: "Payment progress" }

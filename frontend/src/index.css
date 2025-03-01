@@ -9,7 +9,9 @@
 
 body{
   min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
+
 
 a{
   text-decoration: none;

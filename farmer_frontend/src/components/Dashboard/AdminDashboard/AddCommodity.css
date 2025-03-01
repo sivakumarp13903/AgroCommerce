@@ -3,14 +3,14 @@
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #b1d371;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .back-btn {
     background: #007bff;
-    color: white;
+    color: rgb(13, 12, 12);
     border: none;
     padding: 10px 15px;
     font-size: 14px;

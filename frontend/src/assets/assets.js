@@ -9,7 +9,7 @@ import menu_3 from './Millets.jfif'
 import menu_4 from './cocunut.jfif'
 import menu_5 from './Maize.jfif'
 import menu_6 from './rice.jfif'
-import menu_7 from './SoyaBean.jfif'
+import menu_7 from './Wheat.jfif'
 import menu_8 from './Barley.jfif'
 
 import food_1 from './food_1.png'
@@ -110,7 +110,7 @@ export const menu_list = [
         menu_image: menu_6
     },
     {
-        menu_name: "SoyaBean",
+        menu_name: "wheat",
         menu_image: menu_7
     },
     {

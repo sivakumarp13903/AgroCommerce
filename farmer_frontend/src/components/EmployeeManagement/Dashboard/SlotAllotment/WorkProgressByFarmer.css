@@ -1,45 +1,121 @@
-.work-progress-container {
-    width: 90%;
-    margin: auto;
-    text-align: center;
+.workprogress-body1 {
+    background: url('https://st2.depositphotos.com/3601539/5584/i/450/depositphotos_55844883-stock-photo-myanmar-farmer-working-in-ricefield.jpg') 
+    no-repeat center center/cover;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    padding: 20px;
 }
 
-.work-progress-table {
+.work-progress-container1 {
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(7px);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: black; /* 🔹 Ensuring black text */
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Filters */
+.filters-container1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters-container1 select {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    color: #050608;
+}
+
+.filters-container1 select:hover {
+    border-color: #007bff;
+}
+
+/* Table Styles */
+.work-progress-table1 {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.work-progress-table th, .work-progress-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
+.work-progress-table1 th, 
+.work-progress-table1 td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.work-progress-table th {
-    background-color: #f4f4f4;
-}
-
-.verify-btn {
-    background-color: #28a745;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.verify-btn:hover {
-    background-color: #218838;
-}
-
-.verified-text {
-    color: green;
+.work-progress-table1 th {
+    background: #050608;
+    color: rgb(252, 246, 246);
     font-weight: bold;
 }
 
-.error {
-    color: red;
+.work-progress-table1 tbody tr:nth-child(even) {
+    background: #f2f2f2;
 }
 
-.success {
-    color: green;
+.work-progress-table1 tbody tr:hover {
+    background: #e9ecef;
+}
+
+/* Buttons */
+.verify-btn1 {
+    background: #28a745;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.verify-btn:hover1 {
+    background: #218838;
+}
+
+.verified-text1 {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Success & Error Messages */
+.success1 {
+    text-align: center;
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.error1 {
+    text-align: center;
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 10px;
 }

@@ -18,7 +18,8 @@ const FarmerEmpNavigation = ({ currentPath = "" }) => {
         { path: "/recruit-management/application", label: "Job Application" },
         { path: "/recruit-management/workprogress", label: "Work Progress" },
         { path: "/recruit-management/payment-process", label: "Payment Process" },
-        { path: "/recruit-management/post-job", label: "Post Job" }
+        { path: "/recruit-management/post-job", label: "Post Job" },
+        { path: "/recruit-management/edit-job", label: "Edit Job" }
     ];
     
     return (

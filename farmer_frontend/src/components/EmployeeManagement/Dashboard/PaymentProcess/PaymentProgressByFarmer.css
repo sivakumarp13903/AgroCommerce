@@ -1,69 +1,112 @@
+.payment-body {
+    background: url('https://st2.depositphotos.com/3601539/5584/i/450/depositphotos_55844883-stock-photo-myanmar-farmer-working-in-ricefield.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
-    max-width: 900px;
-    margin: auto;
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: black; /* 🔹 Ensuring black text */
+    font-family: 'Poppins', sans-serif;
 }
 
 h2 {
-    text-align: center;
-    color: #333;
+    color: #070404;
+    font-size: 24px;
     margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.success {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.error {
+    color: #FF5733;
+    background: rgba(255, 87, 51, 0.1);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.table th, 
-.table td {
+.table th, .table td {
     padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #0d0b0b;
+    font-weight: 400;
     text-align: center;
-    border: 1px solid #ddd;
 }
 
 .table th {
-    background-color: #007bff;
-    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
 }
 
 .table td {
-    color: #333;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.filter-container input, .filter-container select {
+    padding: 10px;
+    width: 30%;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #150b0b;
+    outline: none;
+}
+
+.filter-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.filter-container select {
+    cursor: pointer;
 }
 
 .btn-primary {
-    background-color: #28a745;
-    border: none;
-    padding: 8px 12px;
+    background: linear-gradient(to right, #56CCF2, #2F80ED);
     color: white;
-    border-radius: 4px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #218838;
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
 }
 
 .sent-text {
-    color: #155724;
+    color: #4CAF50;
     font-weight: bold;
-}
-
-.success {
-    text-align: center;
-    color: green;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.error {
-    text-align: center;
-    color: red;
-    font-weight: bold;
-    margin-bottom: 10px;
 }

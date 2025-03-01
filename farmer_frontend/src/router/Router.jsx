@@ -27,6 +27,11 @@ import AddCommodity from "../components/Dashboard/AdminDashboard/AddCommodity";
 import Sidebar from "../components/Dashboard/AdminDashboard/Sidebar"; // Adjust path if needed
 import ManageProduct from "../components/Dashboard/AdminDashboard/ManageProduct";
 import ManageOrders from "../components/Dashboard/AdminDashboard/ManageOrders";
+import EditJob from "../components/EmployeeManagement/Dashboard/EditJob/EditJob";
+import FarmerJobs from "../components/EmployeeManagement/Dashboard/EditJob/FarmerJobs";
+import ManageUsers from "../components/Dashboard/AdminDashboard/ManageUsers";
+import AddUser from "../components/Dashboard/AdminDashboard/AddUser";
+// import ReportGeneration from "../components/Dashboard/AdminDashboard/GenerateReport";
 
 
 /* Farmer Employee Management Layout */
@@ -119,6 +124,7 @@ const AppRoutes = () => {
           <Route path="workprogress" element={<WorkProgressByFarmer />} />
           <Route path="payment-process" element={<PaymentProgressByFarmer />} />
           <Route path="post-job" element={<PostJob />} />
+          <Route path="edit-job" element={<FarmerJobs />} />
         </Route>
 
         {/* Worker Dashboard Routes */}
@@ -144,6 +150,9 @@ const AppRoutes = () => {
           <Route path="add-product" element={<AddCommodity />} />
           <Route path="manage-products" element={<ManageProduct />} />
           <Route path="manage-orders" element={<ManageOrders />} />
+          <Route path="manage-users" element={<ManageUsers />} />
+          <Route path="add-users" element={<AddUser/>}/>
+          {/* <Route path="manage-reports" element={<ReportGeneration />} /> */}
         </Route>
       </Routes>
     </CartContext.Provider>

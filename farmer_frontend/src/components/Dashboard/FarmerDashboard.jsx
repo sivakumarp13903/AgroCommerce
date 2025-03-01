@@ -25,6 +25,8 @@ const FarmerDashboard = () => {
   };
 
   return (
+    <div className="farmerbody">
+      
     <div className="dashboard-container">
       <h2 className="dashboard-title">👨‍🌾 Farmer Dashboard</h2>
 
@@ -37,12 +39,11 @@ const FarmerDashboard = () => {
       ) : (
         <p className="loading-text">Loading farmer details...</p>
       )}
+
       {/* ✅ Farmer-Specific Navigation */}
       <div className="dashboard-options">
-        <Link to="/recruit-management" className="dashboard-card">
-          📌 Employee Management
-        </Link>
-        {/* <Link to="/recruit-management/application" className="dashboard-card">
+        
+        <Link to="/recruit-management/application" className="dashboard-card">
           📋 View Job Applications
         </Link>
         <Link to="/recruit-management/workprogress" className="dashboard-card">
@@ -50,10 +51,14 @@ const FarmerDashboard = () => {
         </Link>
         <Link to="/recruit-management/payment-process" className="dashboard-card">
           💳 Payment Processing
-        </Link> */}
+        </Link>
+        <Link to="/recruit-management/edit-job" className="dashboard-card">
+          📌 Job Management
+        </Link>
       </div>
 
       <button className="logout-btn" onClick={handleLogout}>🚪 Logout</button>
+    </div>
     </div>
   );
 };

@@ -1,42 +1,163 @@
-.farmer-applications-container {
-    max-width: 900px;
-    margin: 20px auto;
+/* 🌿 General Styles */
+.application-body {
+    background: url('https://st2.depositphotos.com/3601539/5584/i/450/depositphotos_55844883-stock-photo-myanmar-farmer-working-in-ricefield.jpg') 
+    no-repeat center center/cover;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
     padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 📌 Container */
+.farmer-applications-container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: black; /* 🔹 Ensuring black text */
+}
+
+/* 🏷️ Header */
+.farmer-applications-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: black; /* 🔹 Black text */
+}
+
+/* 🔽 Filter Section */
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid black; /* 🔹 Better contrast */
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    cursor: pointer;
+    outline: none;
+    width: 23%;
+    text-align: center;
+}
+
+.filters select option {
+    background: black;
+    color: white;
+}
+
+/* 📋 Table Styles */
 .applications-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.applications-table th, .applications-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
+/* 🖼️ Table Headers */
 .applications-table th {
-    background: #4CAF50;
-    color: white;
+    background: black; /* 🔹 Improved contrast */
+    color: white; 
+    padding: 12px;
+    text-transform: uppercase;
 }
 
+/* 📌 Table Rows */
+.applications-table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: black; /* 🔹 Ensuring readability */
+}
+
+/* 🎨 Alternating Row Background */
+.applications-table tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* 🟢 Accept Button */
 .accept-btn {
-    background-color: green;
+    background: linear-gradient(135deg, #28a745, #52b788);
     color: white;
-    padding: 5px 10px;
     border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
     cursor: pointer;
-    margin-right: 5px;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 6px;
 }
 
+.accept-btn:hover {
+    background: linear-gradient(135deg, #1b4332, #40916c);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 🔴 Reject Button */
 .reject-btn {
-    background-color: red;
+    background: linear-gradient(135deg, #ff4d4d, #e63946);
     color: white;
-    padding: 5px 10px;
     border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.reject-btn:hover {
+    background: linear-gradient(135deg, #b71c1c, #900c3f);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .farmer-applications-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .applications-table th, 
+    .applications-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .accept-btn, .reject-btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters select {
+        width: 100%;
+    }
 }

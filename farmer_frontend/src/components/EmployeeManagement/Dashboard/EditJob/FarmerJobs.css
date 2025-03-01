@@ -1,0 +1,117 @@
+/* Background Styling */
+.farmer-job {
+    background: url("https://img.freepik.com/free-photo/nature-product-backdrop-farm-sunlight_53876-147923.jpg") no-repeat center center/cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    margin-top: 55px;
+    padding: 0;
+}
+
+/* Main Container */
+.farmer-jobs-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+    color: #000000;
+}
+
+/* Title */
+.farmer-jobs-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #060606;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Job List */
+.jobs-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Job Card */
+.job-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #060404;
+}
+
+.job-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Job Title */
+.job-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Job Description */
+.job-desc {
+    font-size: 15px;
+    color: #195d42;
+    margin-bottom: 10px;
+}
+
+/* Job Info */
+.job-info {
+    font-size: 14px;
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #ff4e50, #ff7e5f);
+    transform: scale(1.05);
+}
+
+/* No Jobs Message */
+.no-jobs-message {
+    font-size: 18px;
+    font-style: italic;
+    color: #fff;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff5e57;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+

@@ -4,15 +4,18 @@ import "./PaymentProgressByWorker.css";
 
 const PaymentProgressByWorker = () => {
     const [payments, setPayments] = useState([]);
+    const [filteredPayments, setFilteredPayments] = useState([]);
     const [workerId] = useState(localStorage.getItem("workerId") || null);
     const [error, setError] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
+    const [filterStatus, setFilterStatus] = useState("all");
 
     useEffect(() => {
         if (workerId) {
             axios.get(`http://localhost:5000/api/payments/worker/${workerId}`)
                 .then((response) => {
                     setPayments(response.data);
+                    setFilteredPayments(response.data);
                 })
                 .catch((error) => {
                     console.error("Error fetching payment progress:", error);
@@ -44,14 +47,35 @@ const PaymentProgressByWorker = () => {
         }
     };
 
-    return (
-        <div className="container mt-4">
-            <h2>Payment Progress - Worker</h2>
-            
-            {successMessage && <p className="success">{successMessage}</p>}
-            {error && <p className="error">{error}</p>}
+    // Filter payments based on selected status
+    useEffect(() => {
+        if (filterStatus === "all") {
+            setFilteredPayments(payments);
+        } else {
+            setFilteredPayments(payments.filter(payment => payment.paymentStatus === filterStatus));
+        }
+    }, [filterStatus, payments]);
 
-            <table className="table table-bordered">
+    return (
+        <div className="payment-body">
+            <div className="worker-payment-container">
+            <h2>Payment Progress - Worker</h2>
+
+            {successMessage && <p className="payment-success">{successMessage}</p>}
+            {error && <p className="payment-error">{error}</p>}
+
+            {/* Filter Dropdown */}
+            <div className="filter-container">
+                <label>Filter by Status:</label>
+                <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}>
+                    <option value="all">All</option>
+                    <option value="sent">Sent</option>
+                    <option value="verified">Verified</option>
+                    <option value="pending">Pending</option>
+                </select>
+            </div>
+
+            <table className="payment-progress-table table-bordered">
                 <thead>
                     <tr>
                         <th>Job Name</th>
@@ -61,8 +85,8 @@ const PaymentProgressByWorker = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {payments.length > 0 ? (
-                        payments.map((payment) => (
+                    {filteredPayments.length > 0 ? (
+                        filteredPayments.map((payment) => (
                             <tr key={payment._id}>
                                 <td>{payment.jobId?.title || "N/A"}</td>
                                 <td>{payment.farmerId?.name || "N/A"}</td>
@@ -70,15 +94,15 @@ const PaymentProgressByWorker = () => {
                                 <td>
                                     {payment.paymentStatus === "sent" ? (
                                         <button 
-                                            className="btn btn-success"
+                                            className="payment-btn payment-btn-success"
                                             onClick={() => verifyPayment(payment._id)}
                                         >
                                             Verify Payment
                                         </button>
                                     ) : payment.paymentStatus === "verified" ? (
-                                        <span className="verified-text">Verified</span>
+                                        <span className="payment-verified-text">Verified</span>
                                     ) : (
-                                        <span className="pending-text">Pending</span>
+                                        <span className="payment-pending-text">Pending</span>
                                     )}
                                 </td>
                             </tr>
@@ -90,6 +114,7 @@ const PaymentProgressByWorker = () => {
                     )}
                 </tbody>
             </table>
+        </div>
         </div>
     );
 };

@@ -1,0 +1,131 @@
+.manage-users-container1 {
+    padding: 20px;
+    margin: auto 20%;
+    background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+    no-repeat center center/cover;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.manage-users-title1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.filters1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters1 select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.manage-users-table1 {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.manage-users-table1 th, 
+.manage-users-table1 td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.manage-users-table1 th {
+    background: #ff9800;
+    color: #fff;
+    font-size: 16px;
+}
+
+.manage-users-table1 tr:hover {
+    background: #f5f5f5;
+}
+
+.loading-text1, 
+.error-text1, 
+.no-data-text1 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.error-text1 {
+    color: red;
+}
+
+.loading-text1 {
+    color: #ff9800;
+}
+
+.no-data-text1 {
+    color: gray;
+}
+
+/* Buttons */
+.manage-users-edit-btn1, 
+.manage-users-delete-btn1 {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-right: 5px;
+}
+
+.manage-users-edit-btn1 {
+    background: #ff9800;
+    color: #fff;
+}
+
+.manage-users-delete-btn1 {
+    background: #d9534f;
+    color: #fff;
+}
+
+.manage-users-edit-btn1:hover {
+    background: #e68900;
+}
+
+.manage-users-delete-btn1:hover {
+    background: #c9302c;
+}
+
+/* Modal Styling */
+.manage-users-modal .modal1-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.manage-users-modal1 .modal-header1 {
+    background: #ff9800;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.manage-users-modal1 .modal-body1 {
+    padding: 20px;
+}
+
+.manage-users-modal1 .modal-footer1 {
+    border-top: none;
+}

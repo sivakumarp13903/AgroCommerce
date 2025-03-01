@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Table, Button, Modal, Form } from "react-bootstrap";
+import "./ManageProduct.css";
 
 const ManageProduct = () => {
   const [commodities, setCommodities] = useState([]);
@@ -30,6 +31,7 @@ const ManageProduct = () => {
       description: commodity.description,
       price: commodity.price,
       category: commodity.category,
+      stock: commodity.stock, // Added stock field
     });
     setShowEditModal(true);
   };
@@ -68,6 +70,7 @@ const ManageProduct = () => {
             <th>Description</th>
             <th>Price</th>
             <th>Category</th>
+            <th>Stock</th> {/* Added stock column */}
             <th>Actions</th>
           </tr>
         </thead>
@@ -76,8 +79,9 @@ const ManageProduct = () => {
             <tr key={commodity._id}>
               <td>{commodity.name}</td>
               <td>{commodity.description}</td>
-              <td>Rs{commodity.price}</td>
+              <td>₹ {commodity.price}</td>
               <td>{commodity.category}</td>
+              <td>{commodity.stock}</td> {/* Display stock */}
               <td>
                 <Button variant="warning" onClick={() => handleEditClick(commodity)}>
                   Edit
@@ -111,9 +115,7 @@ const ManageProduct = () => {
               <Form.Control
                 as="textarea"
                 value={updatedData.description}
-                onChange={(e) =>
-                  setUpdatedData({ ...updatedData, description: e.target.value })
-                }
+                onChange={(e) => setUpdatedData({ ...updatedData, description: e.target.value })}
               />
             </Form.Group>
             <Form.Group>
@@ -129,9 +131,15 @@ const ManageProduct = () => {
               <Form.Control
                 type="text"
                 value={updatedData.category}
-                onChange={(e) =>
-                  setUpdatedData({ ...updatedData, category: e.target.value })
-                }
+                onChange={(e) => setUpdatedData({ ...updatedData, category: e.target.value })}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Stock</Form.Label>
+              <Form.Control
+                type="number"
+                value={updatedData.stock}
+                onChange={(e) => setUpdatedData({ ...updatedData, stock: e.target.value })}
               />
             </Form.Group>
           </Form>

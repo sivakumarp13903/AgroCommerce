@@ -19,6 +19,7 @@ const jobApplicationRoutes = require("./src/routes/jobApplication.routes");
 const workProgressRoutes = require("./src/routes/workProgress.routes");
 const commodityRouter = require("./src/routes/commodity.routes");
 const cartRouter = require("./src/routes/cart.routes");
+const adminDashboardRoutes = require("./src/routes/dashboard.routes");
 
 // Initialize Express App
 const app = express();
@@ -36,6 +37,15 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("dev"));
+
+
+app.use('/fonts', express.static(path.join(__dirname, 'public/fonts'), {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.woff')) res.setHeader('Content-Type', 'font/woff');
+    if (path.endsWith('.woff2')) res.setHeader('Content-Type', 'font/woff2');
+  }
+}));
+
 
 // ✅ **Serve Images with Proper Headers**
 app.use("/images", express.static(path.join(__dirname, "uploads"), {
@@ -62,6 +72,10 @@ app.use("/api/workprogress", workProgressRoutes);
 app.use("/api/commodity", commodityRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRoutes);
+app.use("/api/admin/dashboard", adminDashboardRoutes);
+
+
+
 
 // Root Endpoint
 app.get("/", (req, res) => {

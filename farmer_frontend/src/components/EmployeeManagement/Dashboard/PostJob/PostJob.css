@@ -1,77 +1,190 @@
-/* Container styles */
-.post-job-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(18, 137, 36, 0.2);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+/* 🌆 Background Image & Centering */
+.postjob-body {
+    background: url('https://st2.depositphotos.com/3601539/5584/i/450/depositphotos_55844883-stock-photo-myanmar-farmer-working-in-ricefield.jpg') no-repeat center center/cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Header styles */
+/* 🌟 Glassmorphism Container */
+.post-job-container {
+    width: 35%;
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* ✅ Ensures Centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🎭 Hover Effect */
+.post-job-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* 🔥 Header Styles */
 .post-job-header {
-    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
     margin-bottom: 20px;
-    font-size: 24px;
+    position: relative;
+}
+
+/* 🎨 Header Underline Effect */
+.post-job-header::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #52b788;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+/* ⚠️ Error Message */
+.error-message {
+    color: #ff4d4d;
+    font-size: 15px;
+    margin-bottom: 14px;
     font-weight: bold;
 }
 
-/* Error message styles */
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-/* Form styles */
+/* 📄 Form Styles */
 .post-job-form {
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
-/* Input styles */
-.post-job-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    font-size: 16px;
-    outline: none;
-}
-
-/* Textarea styles */
+/* ✨ Input & Textarea */
+.post-job-input,
 .post-job-textarea {
-    resize: none;
     width: 100%;
-    height: 100px;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
     font-size: 16px;
     outline: none;
+    background: rgba(255, 255, 255, 0.25);
+    color: rgb(71, 39, 39);
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Button styles */
+/* 📝 Placeholder Styles */
+.post-job-input::placeholder,
+.post-job-textarea::placeholder {
+    color: rgba(16, 10, 10, 0.75);
+}
+
+/* 🔍 Focus Effect */
+.post-job-input:focus,
+.post-job-textarea:focus {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+}
+
+/* 🎨 Animated Button */
 .post-job-button {
-    background: #4CAF50;
-    color: rgb(20, 8, 8);
+    background: linear-gradient(135deg, #28a745, #52b788);
+    color: white;
     border: none;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 6px;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 💡 Button Hover Animation */
+.post-job-button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: -100%;
+    transition: 0.4s ease;
+}
+
+.post-job-button:hover::before {
+    left: 100%;
 }
 
 .post-job-button:hover {
-    background: #45a049;
+    background: linear-gradient(135deg, #1b4332, #40916c);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
+/* 🚫 Disabled Button */
 .post-job-button:disabled {
     background: gray;
     cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .post-job-container {
+        width: 90%;
+        padding: 25px;
+    }
+    
+    .post-job-header {
+        font-size: 24px;
+    }
+    
+    .post-job-button {
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-job-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .post-job-header {
+        font-size: 22px;
+    }
+
+    .post-job-input,
+    .post-job-textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .post-job-button {
+        font-size: 14px;
+        padding: 12px;
+    }
 }

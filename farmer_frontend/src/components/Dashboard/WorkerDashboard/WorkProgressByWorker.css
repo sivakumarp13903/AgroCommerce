@@ -1,49 +1,158 @@
 .work-progress-container {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 100%;
+    height: 100%;
+    margin: 40px auto;
+    padding: 30px;
+    background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-h2 {
-    color: #333;
-}
-
-.work-progress-table {
+.work-progress-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.work-progress-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Table Styles */
+.work-progress-table {
+    width: 80%;
+    margin: 20px auto;
     border-collapse: collapse;
-    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(12px);
 }
 
 .work-progress-table th, 
 .work-progress-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
-}
-
-.work-progress-table th {
-    background-color: #007bff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
 }
 
-.work-progress-table select {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.work-progress-table th {
+    background-color: rgba(16, 17, 18, 0.9);
+    font-weight: bold;
 }
 
-.success {
-    color: green;
+.work-progress-table tbody tr {
+    transition: background 0.3s ease;
+}
+
+.work-progress-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Status Colors */
+.status-arrived {
+    color: orange;
     font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.status-work-progress {
+    color: lightblue;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.status-completed {
+    color: lightgreen;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Dropdown Styling */
+.work-progress-table select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Success and Error Messages */
+.success {
+    color: lightgreen;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+    background: rgba(0, 255, 0, 0.1);
+    position: relative;
+    z-index: 2;
 }
 
 .error {
-    color: red;
+    color: #ff4d4d;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background: rgba(255, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .work-progress-container {
+        padding: 20px;
+    }
+
+    .work-progress-table {
+        width: 100%;
+    }
+
+    .work-progress-table th, 
+    .work-progress-table td {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .work-progress-container h2 {
+        font-size: 22px;
+    }
+
+    .work-progress-table select {
+        font-size: 14px;
+        padding: 6px;
+    }
 }
